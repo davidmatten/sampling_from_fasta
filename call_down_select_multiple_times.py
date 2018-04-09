@@ -7,14 +7,13 @@ from down_selection import main as dsm
 
 def main(infile, outfile, select_size, repeats):
     fn_path = os.path.split(outfile)[0]  # /tmp/folder1/folder2/
-    print(outfile)
     base_fn = basename(outfile).split(".")[0]  # filename.fasta
     extension = outfile.split(".")[-1]  # .fasta
 
     for i in range(repeats):
         built_out_fn = os.path.join(fn_path, base_fn + "_" + str(i) + "." + extension)
         dsm(infile, built_out_fn, select_size)
-    
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Calls the down select python script, for a given number of repeats.')
