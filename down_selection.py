@@ -21,7 +21,7 @@ def main(infile, outfile, down_selection_size):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Down selects from a fasta file.')
+    parser = argparse.ArgumentParser(description='Down selects from a fasta file to the indicated number of sequences.')
     parser.add_argument('-in', '--infile', type=str, help='The input .fasta file.', required=True)
     parser.add_argument('-out', '--outfile', type=str, help='The name of the output .fasta file. This can have a path. '
                                                             'If this path is specified and the working direcotry is not'
